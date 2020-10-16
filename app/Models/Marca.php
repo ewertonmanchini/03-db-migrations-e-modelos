@@ -23,4 +23,9 @@ class Marca extends Model
     //por comando direto, eh necessario definir quais campos
     //isso pode ser feito pelo exemplo abaixo.
     protected $fillable = ['nome'];
+
+    public function produtos(){
+        //hasMany eh para expressar relacionamenho de 1 para muitos
+        return $this->hasMany("App\Models\Produto");
+    }
 }
